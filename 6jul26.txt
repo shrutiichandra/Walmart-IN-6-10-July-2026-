@@ -1,0 +1,19 @@
+https://docs.langchain.com/oss/python/langchain/overview
+Agent = Model + Harness. LangChain provides create_agent: a minimal, highly configurable harness. The harness is everything around the model loop: the prompt, the tools, and any middleware that shapes behavior. Start with the primitives and compose exactly what your use case needs. Supports OpenAI, Anthropic, Google, and more.
+
+The job of a harness: get the model the right context at the right time for the given task.
+
+Use LangChain (create_agent) for a highly customizable harness, easily tailored to your use case and data.
+
+https://docs.langchain.com/oss/python/langchain/agents
+
+
+Use LangGraph, our low-level orchestration framework, for advanced needs combining deterministic and agentic workflows.
+
+LangGraph is very low-level, and focused entirely on agent orchestration. Before using LangGraph, we recommend you familiarize yourself with some of the components used to build agents, starting with models and tools.
+
+Use LangSmith to trace, debug, and evaluate agents built with any of these frameworks. Follow the tracing quickstart to get set up. We recommend you also set up LangSmith Engine which monitors your traces, detects issues, and proposes fixes.
+
+Start with Deep Agents for a “batteries-included” agent with features like automatic context compression, a virtual filesystem, and subagent-spawning. Deep Agents are built on LangChain agents which you can also use directly.
+
+https://docs.langchain.com/oss/python/langgraph/overview
