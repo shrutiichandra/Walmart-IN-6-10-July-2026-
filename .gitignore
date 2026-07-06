@@ -1,5 +1,5 @@
 **/.env
 .vscode
 .wibey
-notes
+notes/secrets*
 *.pem

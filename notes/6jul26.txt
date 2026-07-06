@@ -1,3 +1,22 @@
+pre-req
+
+Prompt Engineering Fundamentals
+•
+Introduction to LLMs & Transformer Mechanics
+•
+Basic GenAI Concepts (embeddings, temperature, context window)
+•
+Introduction to Agents & Vector Databases
+•
+Basic LangChain / LangGraph Tutorials
+•
+Basic Python Coding Exercises
+
+
+https://claude.com/resources/courses
+
+https://docs.langchain.com/oss/python/integrations/document_loaders
+
 https://docs.langchain.com/oss/python/langchain/overview
 Agent = Model + Harness. LangChain provides create_agent: a minimal, highly configurable harness. The harness is everything around the model loop: the prompt, the tools, and any middleware that shapes behavior. Start with the primitives and compose exactly what your use case needs. Supports OpenAI, Anthropic, Google, and more.
 
