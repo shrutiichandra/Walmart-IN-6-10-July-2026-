@@ -1,0 +1,134 @@
+{
+  "programme": "Advanced Agentic AI -- Production Engineering",
+  "track": "India",
+  "module": "Module 1 -- Engineering Decisions for AI Systems",
+  "validation": {
+    "overall": "FAIL",
+    "results": [
+      {
+        "use_case": "Automated Returns Processing",
+        "status": "PASS",
+        "issues": []
+      },
+      {
+        "use_case": "Supplier Risk Intelligence",
+        "status": "PASS",
+        "issues": []
+      },
+      {
+        "use_case": "Store Performance Analytics Reporter",
+        "status": "PASS",
+        "issues": []
+      },
+      {
+        "use_case": "YOUR USE CASE NAME HERE",
+        "status": "FAIL",
+        "issues": [
+          "Use case name is placeholder"
+        ]
+      }
+    ]
+  },
+  "decision_matrices": [
+    {
+      "use_case": "Automated Returns Processing",
+      "axis_scores": {
+        "task_complexity": 2,
+        "latency_tolerance": 1,
+        "cost_ceiling": 1,
+        "risk_tolerance": 1,
+        "update_frequency": 2
+      },
+      "total_score": 7,
+      "recommended_architecture": "Traditional Software",
+      "rationale": "Low complexity, strict latency, or low cost ceiling. A rule-based or deterministic pipeline is faster, cheaper, and more predictable.",
+      "arb_justification": "The recommended architecture for the Automated Returns Processing use case is Traditional Software, primarily due to its ability to effectively manage the task complexity, which scores a 2 out of 5, indicating a moderate number of distinct decision points. The architecture's suitability is further underscored by the critical axis scores of latency tolerance, cost ceiling, and risk tolerance, all scoring 1 out of 5, reflecting the stringent requirements for timely responses, low operational costs, and high precision in output. The primary risk associated with alternative architectures, such as cloud-native or microservices, lies in their potential inability to meet the strict latency and cost constraints, which could lead to inefficiencies and increased operational overhead. Therefore, the Traditional Software architecture is deemed the most appropriate solution for this use case, given the outlined criteria and risk considerations.",
+      "constraints": {
+        "latency_p95_sec": 3,
+        "cost_ceiling_per_query_usd": 0.001,
+        "daily_volume": 1000000,
+        "monthly_cost_ceiling_usd": 30000.0
+      },
+      "alternatives_considered": [
+        "Workflow (Chain)",
+        "Agent"
+      ],
+      "decision_status": "DRAFT"
+    },
+    {
+      "use_case": "Supplier Risk Intelligence",
+      "axis_scores": {
+        "task_complexity": 5,
+        "latency_tolerance": 4,
+        "cost_ceiling": 4,
+        "risk_tolerance": 3,
+        "update_frequency": 4
+      },
+      "total_score": 20,
+      "recommended_architecture": "Agent",
+      "rationale": "High complexity, dynamic branching, or rapidly changing requirements. An agent is justified -- but implement observability and cost controls from day one.",
+      "arb_justification": "The recommended architecture for the Supplier Risk Intelligence use case is an Agent-based approach, as it effectively addresses the complexity of decision-making involved, evidenced by a task complexity score of 5 out of 5. This architecture is well-suited to the latency tolerance of 4 out of 5, allowing for timely responses while maintaining an acceptable cost per query, also rated at 4 out of 5. The primary risk associated with alternative architectures, such as rule-based systems, is their inability to adapt to the dynamic nature of supplier risk factors, which is reflected in the update frequency score of 4 out of 5. Additionally, the risk tolerance score of 3 out of 5 indicates that some level of imprecision is acceptable, further supporting the Agent architecture's capability to manage uncertainties effectively. Overall, the Agent architecture is positioned to deliver robust performance while accommodating the complexities and evolving requirements of the Supplier Risk Intelligence initiative.",
+      "constraints": {
+        "latency_p95_sec": 1800,
+        "cost_ceiling_per_query_usd": 2.0,
+        "daily_volume": 500,
+        "monthly_cost_ceiling_usd": 30000.0
+      },
+      "alternatives_considered": [
+        "Traditional Software",
+        "Workflow (Chain)"
+      ],
+      "decision_status": "DRAFT"
+    },
+    {
+      "use_case": "Store Performance Analytics Reporter",
+      "axis_scores": {
+        "task_complexity": 3,
+        "latency_tolerance": 5,
+        "cost_ceiling": 3,
+        "risk_tolerance": 3,
+        "update_frequency": 3
+      },
+      "total_score": 17,
+      "recommended_architecture": "Workflow (Chain)",
+      "rationale": "Moderate complexity with known steps. A fixed-sequence workflow gives you LLM capability without agent overhead.",
+      "arb_justification": "The recommended architecture for the Store Performance Analytics Reporter is a Workflow (Chain) design, as it effectively accommodates the task's complexity while maintaining a high tolerance for latency. The most influential axis scores supporting this decision are the latency tolerance, which received a perfect score of 5/5, indicating that the system can afford to take time to process data, and the task complexity score of 3/5, reflecting the presence of distinct decision points in the workflow. Alternative architectures, such as a real-time streaming model, pose the primary risk of increased costs and potential inaccuracies due to the need for immediate processing and lower tolerance for imprecision. This Workflow (Chain) architecture strikes an optimal balance between performance, cost, and risk, aligning well with the project's requirements.",
+      "constraints": {
+        "latency_p95_sec": 3600,
+        "cost_ceiling_per_query_usd": 0.5,
+        "daily_volume": 50,
+        "monthly_cost_ceiling_usd": 750.0
+      },
+      "alternatives_considered": [
+        "Traditional Software",
+        "Agent"
+      ],
+      "decision_status": "DRAFT"
+    },
+    {
+      "use_case": "YOUR USE CASE NAME HERE",
+      "axis_scores": {
+        "task_complexity": 3,
+        "latency_tolerance": 3,
+        "cost_ceiling": 3,
+        "risk_tolerance": 3,
+        "update_frequency": 3
+      },
+      "total_score": 15,
+      "recommended_architecture": "Workflow (Chain)",
+      "rationale": "Moderate complexity with known steps. A fixed-sequence workflow gives you LLM capability without agent overhead.",
+      "arb_justification": "The recommended architecture for the use case \"YOUR USE CASE NAME HERE\" is a Workflow (Chain) architecture due to its ability to effectively manage the task's complexity and moderate latency tolerance. The decision scores indicate a balanced need for handling distinct decision points, with a score of 3/5 in task complexity, while also reflecting a reasonable tolerance for latency, cost, risk, and update frequency, each rated at 3/5. The primary risk associated with alternative architectures, such as a monolithic or event-driven approach, lies in their potential inability to adapt to the moderate imprecision and evolving requirements characteristic of this use case. Therefore, the Workflow (Chain) architecture is deemed the most suitable choice to ensure a structured and efficient processing flow while accommodating the outlined constraints.",
+      "constraints": {
+        "latency_p95_sec": 5,
+        "cost_ceiling_per_query_usd": 0.01,
+        "daily_volume": 1000,
+        "monthly_cost_ceiling_usd": 300.0
+      },
+      "alternatives_considered": [
+        "Traditional Software",
+        "Agent"
+      ],
+      "decision_status": "DRAFT"
+    }
+  ]
+}
