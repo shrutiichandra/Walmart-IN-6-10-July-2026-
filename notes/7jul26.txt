@@ -1,0 +1,9 @@
+https://docs.ragas.io/en/latest/concepts/metrics/
+https://developers.openai.com/api/docs/models/text-embedding-3-small
+
+text-embedding-3-small is our improved, more performant version of our ada embedding model. Embeddings are a numerical representation of text that can be used to measure the relatedness between two pieces of text. Embeddings are useful for search, clustering, recommendations, anomaly detection, and classification tasks.
+
+
+old - https://towardsdatascience.com/text-embeddings-comprehensive-guide-afd97fce8fb5/ tf-idf/bag of words/words2vec
+
+https://developers.openai.com/api/docs/guides/embeddings
